@@ -15,7 +15,7 @@ connectDatabase();
 
 app.use('/api',routes);
 
-app.listen(8000, () => (
+app.listen(process.env.PORT, () => (
     console.log("Escuchando el puerto 8000")
 ))
 
