@@ -1,8 +1,8 @@
-const { validationResult, body } = require("express-validator");
+const { validationResult, query } = require("express-validator");
 
 const validateCategory = async (req, res, next) => {
   const rules = [
-    body("category")
+    query("category")
       .escape()
       .notEmpty()
       .withMessage("El campo categoria es obligatorio")
