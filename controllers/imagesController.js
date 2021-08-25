@@ -33,7 +33,7 @@ exports.getImagesByCategory = async(req, res) => {
   const { category } = req.body;
 
   try {
-    const foundImages = await (await Images.find({ category })).entries;
+    const foundImages = await Images.find({ category });
 
     return res.json({
       ok: true,
