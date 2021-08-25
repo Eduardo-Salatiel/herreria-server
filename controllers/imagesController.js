@@ -30,7 +30,7 @@ exports.uploadImage = async (req, res) => {
 };
 
 exports.getImagesByCategory = async(req, res) => {
-  const { category } = req.body;
+  const { category } = req.params;
 
   try {
     const foundImages = await Images.find({ category });
