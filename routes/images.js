@@ -6,7 +6,7 @@ const validateImage = require("./../middlewares/validateImage");
 
 app.post(
   "/upload-image",
-  [validateCategory, validateImage],
+  [validateImage],
   imagesController.uploadImage
 );
 
